@@ -83,7 +83,7 @@ const transformer = function (str, fn) {
 transformer('JavaScript is the best!', upperFirstWord);
 
 
-/*
+
 /////////////////////////////////////////
 
 const ktm = function (model) {
@@ -91,8 +91,8 @@ const ktm = function (model) {
   return [firstt.toUpperCase(), ...other].join(' ');
 };
 
-const compModel = function (model, fns) {
-  console.log(`your bike model is: ${fns(ktm)}`);
+const compModel = function (model,fns) {
+  console.log(`your bike model is: ${ktm(model)}`);
+  console.log(fns.name)
 };
 compModel('ktmrc200', ktm);
-*/
