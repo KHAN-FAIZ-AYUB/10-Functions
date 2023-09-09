@@ -59,6 +59,7 @@ newPassport(faiz);
 checkIn(flight, faiz);
 */
 
+/*
 ///////////////////////////////////////
 // Functions Accepting Callback Functions
 
@@ -96,3 +97,21 @@ const compModel = function (model,fns) {
   console.log(fns.name)
 };
 compModel('ktmrc200', ktm);
+*/
+
+const greet = function (greeting) {
+  return function (name) {
+    console.log(`${greeting} ${name}`);
+  };
+};
+
+const greeterHey = greet('Hey');
+greeterHey('Khan');
+
+greet('Hello')('Khan');
+
+// Challenge
+
+const greetArr = greeting => name => console.log(`${greeting} ${name}`);
+
+greetArr('Hi')('Faiz');
