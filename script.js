@@ -200,13 +200,21 @@ document
   .querySelector('.buy')
   .addEventListener('click', lufthansa.buyPlane.bind(lufthansa));
 
-/*
+// Pratial application
+
+const addTax = (rate, value) => value + value * rate;
+console.log(addTax(0.23, 100));
+
+const addVAT = addTax.bind(null, 0.23);
+// addVAT = value + value * 0.23;
+
+console.log(addVAT(100));
+
 // Challenge
 const addTaxRate = function (rate) {
   return function (value) {
     return value + value * rate;
   };
 };
-const addVAT = addTaxRate(0.23);
-console.log(addVAT(100));
-*/
+const addVAT2 = addTaxRate(0.23);
+console.log(addVAT2(200));
