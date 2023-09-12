@@ -121,6 +121,7 @@ const greetArr = greeting => name => console.log(`${greeting} ${name}`);
 greetArr('Hi')('Faiz');
 */
 
+/*
 ///////////////////////////////////////
 // The call and apply Methods
 
@@ -170,3 +171,16 @@ book.apply(swiss, flightData);
 console.log(swiss);
 
 book.call(swiss, ...flightData);
+*/
+
+///////////////////////////////////////
+// The bind Method
+
+// Challenge
+const addTaxRate = function (rate) {
+  return function (value) {
+    return value + value * rate;
+  };
+};
+const addVAT = addTaxRate(0.23);
+console.log(addVAT(100));
