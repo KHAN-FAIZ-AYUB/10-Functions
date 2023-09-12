@@ -121,7 +121,6 @@ const greetArr = greeting => name => console.log(`${greeting} ${name}`);
 greetArr('Hi')('Faiz');
 */
 
-/*
 ///////////////////////////////////////
 // The call and apply Methods
 
@@ -171,11 +170,23 @@ book.apply(swiss, flightData);
 console.log(swiss);
 
 book.call(swiss, ...flightData);
-*/
 
 ///////////////////////////////////////
 // The bind Method
+// book.call(eurowings,23,'Khan Faiz')
 
+const bookEW = book.bind(eurwings);
+const bookLH = book.bind(lufthansa);
+const bookSA = book.bind(swiss);
+// console.log(lufthansa);
+
+bookEW(23, 'MR Khan');
+
+const bookEW23 = book.bind(eurwings, 23);
+bookEW23('MR Khan');
+bookEW23('Miss Khan');
+
+/*
 // Challenge
 const addTaxRate = function (rate) {
   return function (value) {
@@ -184,3 +195,4 @@ const addTaxRate = function (rate) {
 };
 const addVAT = addTaxRate(0.23);
 console.log(addVAT(100));
+*/
