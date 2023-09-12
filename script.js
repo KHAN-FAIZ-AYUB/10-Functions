@@ -99,6 +99,10 @@ const compModel = function (model,fns) {
 compModel('ktmrc200', ktm);
 */
 
+/*
+///////////////////////////////////////
+// Functions Returning Functions
+
 const greet = function (greeting) {
   return function (name) {
     console.log(`${greeting} ${name}`);
@@ -115,3 +119,33 @@ greet('Hello')('Khan');
 const greetArr = greeting => name => console.log(`${greeting} ${name}`);
 
 greetArr('Hi')('Faiz');
+*/
+
+///////////////////////////////////////
+// The call and apply Methods
+
+const lufthansa = {
+  airline: 'Lufthansa',
+  iataCode: 'LH',
+  booking: [],
+  // book:function(){}
+  book(flightNum, name) {
+    console.log(
+      `${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`
+    );
+    this.booking.push({ flight: `${this.iataCode}${flightNum}`, name });
+  },
+};
+lufthansa.book(911, 'Faiz Khan');
+
+const eurwings = {
+  airline: 'Eurwings',
+  iataCode: 'EW',
+  booking: [],
+};
+
+const book = lufthansa.book;
+
+// Does NOT work
+// book(23, 'Sarah Williams');
+
