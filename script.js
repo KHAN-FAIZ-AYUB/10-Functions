@@ -149,3 +149,24 @@ const book = lufthansa.book;
 // Does NOT work
 // book(23, 'Sarah Williams');
 
+// Call method
+book.call(eurwings, 23, 'Fariha Shaikh');
+console.log(eurwings);
+
+book.call(lufthansa, 92, 'Arfaz');
+console.log(lufthansa);
+
+const swiss = {
+  airline: 'SwissAir',
+  iataCode: 'SA',
+  booking: [],
+};
+
+book.call(swiss, 811, 'Faisal');
+
+// APPLY method
+const flightData = [583, 'Filza'];
+book.apply(swiss, flightData);
+console.log(swiss);
+
+book.call(swiss, ...flightData);
