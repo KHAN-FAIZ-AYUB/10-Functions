@@ -364,7 +364,7 @@ boardPassengers(180, 5);
 
 ///////////////////////////////////////
 // Coding Challenge #2
-
+/*
 (function () {
   const header = document.querySelector('h1');
   header.style.color = 'red';
@@ -373,3 +373,4 @@ boardPassengers(180, 5);
     header.style.color = 'blue';
   });
 })();
+*/
