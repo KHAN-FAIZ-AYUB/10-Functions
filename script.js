@@ -200,7 +200,7 @@ document
   .querySelector('.buy')
   .addEventListener('click', lufthansa.buyPlane.bind(lufthansa));
 
-// Pratial application
+// 
 
 const addTax = (rate, value) => value + value * rate;
 console.log(addTax(0.23, 100));
